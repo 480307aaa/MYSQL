@@ -1,0 +1,17 @@
+    <!-- ²åÈëÊý¾Ý -->
+    <insert id="batchInsert" parameterType="java.util.List">
+            INSERT INTO cdm_member_leader (
+                leader_type ,
+                type_id ,
+                role_type ,
+                member_leader_id
+            ) VALUES
+            <foreach collection="list" item="item" index="index" separator="," >
+                (
+                        #{item.ownerType} ,
+                        #{item.ownerId} ,
+                        #{item.roleType} ,
+                        #{item.memberId}
+                )
+            </foreach>
+    </insert>
