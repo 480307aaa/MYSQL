@@ -1,0 +1,6 @@
+UPDATE todo_i818 SET display = (
+    CASE `locale` WHEN "ZH_CN" THEN "人才服务"  
+    WHEN "ZH_TW" THEN  "人才服務" 
+    WHEN "EN_US" THEN  "HR services" 
+    END)
+WHERE typeName="友人才";
